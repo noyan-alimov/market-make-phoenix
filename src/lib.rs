@@ -1,11 +1,13 @@
 use solana_program::{
-    account_info::AccountInfo, entrypoint::ProgramResult, pubkey::Pubkey
+    account_info::AccountInfo, declare_id, entrypoint::ProgramResult, pubkey::Pubkey
 };
 
 pub mod state;
 pub mod instruction;
 pub mod processor;
 pub mod error;
+
+declare_id!("7vybLSwaCimfTL7AarykdoQWpvwW59ZABTf88fcTuYFx");
 
 #[cfg(not(feature = "no-entrypoint"))]
 solana_program::entrypoint!(process_instruction);
